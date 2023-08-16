@@ -82,6 +82,28 @@ function redrawLines() {
     });
 }
 
+// Function to save the drawing as an image
+function saveDrawing() {
+    // Create a temporary canvas to draw all lines
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = canvas.width;
+    tempCanvas.height = canvas.height;
+    const tempContext = tempCanvas.getContext('2d');
+
+    // Redraw all lines on the temporary canvas
+    redrawLines(tempContext);
+
+    // Convert the temporary canvas content to a data URL
+    const imgData = tempCanvas.toDataURL('image/png');
+
+    // Create a temporary link element to download the image
+    const link = document.createElement('a');
+    link.href = imgData;
+    link.download = 'mydrawing.png';
+    link.click();
+}
+
+
 // Event listeners for drawing and controls
 
 // Start drawing when mouse is pressed
@@ -111,3 +133,6 @@ resetButton.addEventListener('click', () => {
 
 // Undo the last drawn line
 undoButton.addEventListener('click', undo);
+
+// Event listener for the Save button
+saveButton.addEventListener('click', saveDrawing);
