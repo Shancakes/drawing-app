@@ -1,4 +1,3 @@
-// Get references to HTML elements
 const canvas = document.getElementById('drawingCanvas');
 const context = canvas.getContext('2d');
 const colorPicker = document.getElementById('colorPicker');
@@ -46,7 +45,7 @@ function draw(e) {
     const x = e.clientX - canvas.offsetLeft;
     const y = e.clientY - canvas.offsetTop;
 
-    // Draw line segment
+    // Draw line
     context.lineTo(x, y);
     context.stroke();
 
