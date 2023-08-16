@@ -1,4 +1,4 @@
-# drawing-app
+# Doodle Canvas
 An interactive drawing app made with javascript, HTML and CSS. You can create and save your drawings.
 
 ## Description
@@ -12,10 +12,10 @@ An interactive drawing app made with javascript, HTML and CSS. You can create an
 
 -If the user wants to start over from scratch, they can select "Erase the Canvas" to clear all previous input
 
--After the user is satisfied with their drawing, they can download the drawing by clicking the "Save Your Drawing! button, which saves a file to desktop, named 'mydrawing.png'
+-After the user is satisfied with their drawing they can select the "Save Your Drawing!" button, which saves a file to desktop named 'mydrawing.png'
 
-![demo-img](images/demo1.png)
-![demo-img](images/demo2.png)
+![demo-img](demo1.png)
+![demo-img](demo2.png)
 
 ## Technologies Used
 -HTML
